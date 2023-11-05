@@ -1,0 +1,40 @@
+* {
+  padding: 0;
+  margin: o;
+  box-sizing: border-box;
+  overflow: hidden;
+  /* user-select: none; */
+}
+body {
+  background-color: black;
+}
+.container {
+  width: 400px;
+  height: 500px;
+  border:white 4px solid;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.canvas1 {
+  width: 400;
+  height: 500;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%;
+}
+input {
+  position: absolute;
+  width: 75%;
+  top: 1%;
+  left: 50%;
+  transform: translate(-50%, -2%);
+  padding: 10px;
+  margin: 0px 0;
+  z-index: 100;
+}
