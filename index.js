@@ -57,8 +57,7 @@ window.addEventListener("load", function () {
       this.fontSize = 80;
       this.lineHeight = this.fontSize * 0.99;
       this.maxTextWidth = this.canvasWidth * 0.8;
-      this.verticalOffset = 20
-      ;
+      this.verticalOffset = 20;
       const textInput = document.getElementById("textInput");
       textInput.addEventListener("keyup", (e) => {
         if (e.key !== " ") {
@@ -76,8 +75,8 @@ window.addEventListener("load", function () {
         active: false,
       };
       window.addEventListener("pointermove", (e) => {
-        this.pointer.x = e.x;
-        this.pointer.y = e.y;
+        this.pointer.x = e.offsetX;
+        this.pointer.y = e.offsetY;
       });
     }
     wrapText(text) {
@@ -165,9 +164,9 @@ window.addEventListener("load", function () {
     resize(width, height) {
       this.canvasWidth = width;
       this.canvasHeight = height;
-      this.textX = this.canvasWidth * 0.5
-      this.textY= this.canvasHeight * 0.5
-      this.maxTextWidth = this.canvasWidth * 0.8
+      this.textX = this.canvasWidth * 0.5;
+      this.textY = this.canvasHeight * 0.5;
+      this.maxTextWidth = this.canvasWidth * 0.8;
     }
   }
   const effect = new Effect(ctx, canvas.width, canvas.height);
@@ -185,7 +184,7 @@ window.addEventListener("load", function () {
   this.window.addEventListener("resize", () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-    effect.resize(canvas.width, canvas.height)
-     effect.wrapText("lets Code with Javascript now");
+    effect.resize(canvas.width, canvas.height);
+    effect.wrapText("lets Code with Javascript now");
   });
 });
